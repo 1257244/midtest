@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無標題文件</title>
+<style type="text/css">
+body {
+    background-image: url(../images/0402.jpg);
+    text-align: center;
+}
+</style>
+<script type="text/javascript">
+function showConfirmation() {
+  var r1Value = document.querySelector('input[name="R1"]:checked').value;
+  var r2Value = document.querySelector('input[name="R2"]:checked').value;
+  var confirmationMessage = '流行皮件選購確認：\n\n●真皮皮包：' + r1Value + '\n●真皮短夾：' + r2Value;
+  return confirm(confirmationMessage);
+}
+</script>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post">
+  <table width="800" border="1" align="center">
+    <tbody>
+      <tr>
+        <td width="400" height="100" align="center" valign="middle" bgcolor="#FFFF99">真皮皮包</td>
+        <td width="400" height="100" align="center" valign="middle" bgcolor="#FFFF99">真皮短夾</td>
+      </tr>
+      <tr>
+        <td width="400" height="150" align="center" valign="middle" bgcolor="#FFFF99"><img src="../images/0403.jpg" width="250" height="150" alt=""/></td>
+        <td width="400" height="150" align="center" valign="middle" bgcolor="#FFFF99"><img src="../images/0404.jpg" width="216" height="150" alt=""/></td>
+      </tr>
+      <tr>
+        <td width="400" height="100" align="center" valign="middle" bgcolor="#FFFF99"><p>
+          <label>
+            <input name="R1" type="radio" id="R1_0" value="購買" checked="checked">
+            購買</label>
+          <label>
+            <input type="radio" name="R1" value="不購買" id="R1_1">
+            不購買</label>
+          <label>
+            <input type="radio" name="R1" value="考慮中" id="R1_2">
+            考慮中</label>
+          <br>
+        </p></td>
+        <td width="400" height="100" align="center" valign="middle" bgcolor="#FFFF99"><label>
+          <input type="radio" name="R2" value="購買" id="R1_3">
+          購買</label>
+          <label>
+            <input type="radio" name="R2" value="不購買" id="R1_4">
+            不購買</label>
+          <label>
+            <input name="R2" type="radio" id="R1_5" value="考慮中" checked="checked">
+        考慮中</label></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    <input name="submit" type="submit" id="submit" value="送出" onclick="return showConfirmation();">
+    <input type="reset" name="reset" id="reset" value="重置">
+  </p>
+</form>
+</body>
+</html>
